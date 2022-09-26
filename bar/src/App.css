@@ -1,0 +1,32 @@
+body {
+  padding: 15px;
+}
+
+.bar-box {
+  width: min-content;
+}
+
+.multicolor-bar {
+  display: flex;
+  gap: 1px;
+  height: 20px;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.color-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.bar-item {
+  border-radius: 5px;
+  width: 8px;
+}
