@@ -13,4 +13,5 @@ Total is calculated by this data (as a sum of each value), and the bar line and 
 0-value bars are not displayed, non-zero values always have not less than 1 bar (bars amount is an integer)
 
 ## Demo
-https://user-images.githubusercontent.com/90955335/192292705-6760de8a-b0f0-437a-9248-42cf1838bb28.mp4
+
+https://user-images.githubusercontent.com/90955335/192300220-3e88966b-8507-439d-b098-02ece6e62d96.mp4
