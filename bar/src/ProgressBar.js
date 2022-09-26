@@ -1,7 +1,8 @@
-import array from "./data";
 import "./ProgressBar.css";
 
-export default function ProgressBar() {
+export default function ProgressBar({ array, height, width }) {
+
+  //converting a value to a percentage
   const percentageConversion = () => {
     let sum = 0;
     array.map((item) => {
@@ -11,26 +12,35 @@ export default function ProgressBar() {
 
     return array.map((item) => {
       if (sum != 0) {
-        let percent = Math.round((item.value / sum) * 100);
+        let percent = ((item.value / sum) * 100).toFixed(1);
         item.percent = percent;
       }
     });
   };
 
+  //calculating the width of one bar line to set the width of the box
+  const calculateWidth = () => {
+    var num = parseInt(width.match(/\d+/));
+    let calcWidth = (num - 98) / 100;
+    return calcWidth;
+  };
+
+  //output progress bar
   const bar = () => {
     percentageConversion();
     return array.map((item) => {
-      return Array.from(Array(item.percent).keys()).map((i) => {
+      return Array.from(Array(Math.ceil(item.percent)).keys()).map((i) => {
         return (
           <div
             className="bar-item"
-            style={{ backgroundColor: item.color }}
+            style={{ backgroundColor: item.color, width: calculateWidth() }}
           ></div>
         );
       });
     });
   };
 
+  //output description of progress bar
   const barDescribe = () => {
     return array.map((item) => {
       return Array.from(Array(1).keys()).map((i) => {
@@ -46,10 +56,11 @@ export default function ProgressBar() {
       });
     });
   };
+
   return (
     <div className="bar-box">
-      <div className="multicolor-bar">
-        {array ? bar() : <div>Данные не пришли</div>}
+      <div className="multicolor-bar" style={{ height: height }}>
+        {array ? bar() : <div>Data not received</div>}
       </div>
       <div className="description">{array ? barDescribe() : <div></div>}</div>
     </div>

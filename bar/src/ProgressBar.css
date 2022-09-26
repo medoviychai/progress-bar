@@ -10,7 +10,6 @@ body {
   .multicolor-bar {
     display: flex;
     gap: 1px;
-    height: 20px;
   }
   
   .description {
@@ -29,5 +28,4 @@ body {
   
   .bar-item {
     border-radius: 5px;
-    width: 8px;
   }
