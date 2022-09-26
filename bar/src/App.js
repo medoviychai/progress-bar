@@ -1,5 +1,4 @@
-import './App.css';
-import ProgressBar from './ProgressBar';
+import ProgressBar from "./ProgressBar";
 
 function App() {
   return (

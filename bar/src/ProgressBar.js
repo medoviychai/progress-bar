@@ -1,19 +1,19 @@
 import array from "./data";
+import "./ProgressBar.css";
 
 export default function ProgressBar() {
-
   const percentageConversion = () => {
     let sum = 0;
     array.map((item) => {
-        sum = sum + item.value
-        return sum;
+      sum = sum + item.value;
+      return sum;
     });
 
     return array.map((item) => {
-    if (sum != 0) {
+      if (sum != 0) {
         let percent = Math.round((item.value / sum) * 100);
         item.percent = percent;
-    }
+      }
     });
   };
 
@@ -51,9 +51,7 @@ export default function ProgressBar() {
       <div className="multicolor-bar">
         {array ? bar() : <div>Данные не пришли</div>}
       </div>
-      <div className="description">
-        {array ? barDescribe() : <div></div>}
-      </div>
+      <div className="description">{array ? barDescribe() : <div></div>}</div>
     </div>
   );
 }
