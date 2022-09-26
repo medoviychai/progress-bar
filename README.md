@@ -14,4 +14,4 @@ Total is calculated by this data (as a sum of each value), and the bar line and 
 
 ## Demo
 
-https://user-images.githubusercontent.com/90955335/192300220-3e88966b-8507-439d-b098-02ece6e62d96.mp4
+https://user-images.githubusercontent.com/90955335/192301130-5370a9bb-3e22-46da-b441-51852a798134.mp4
